@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "out": "../js/contact_us.js",
+        "sourceMap": true
+    },
+    "files": [
+        "contact_us.ts"
+    ]
+}

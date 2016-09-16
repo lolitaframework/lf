@@ -1,0 +1,93 @@
+[
+    {
+        "title" : "General site settings",
+        "description" : "This is general site settings",
+        "__CONTROLS__" : [
+            {
+                "label" : "Site Title",
+                "id" : "blogname",
+                "settings" : "blogname",
+                "__SETTINGS__" : {
+                    "type" : "option"
+                }
+            },
+            {
+                "label" : "Tagline",
+                "id" : "blogdescription",
+                "settings" : "blogdescription",
+                "__SETTINGS__" : {
+                    "type" : "option"
+                }
+            },
+            {
+                "label" : "Upload a logo",
+                "__CLASS__" : "WP_Customize_Image_Control"
+            },
+            {
+                "label" : "Background image",
+                "__CLASS__" : "WP_Customize_Image_Control"
+            },
+            {
+                "label" : "Social icons",
+                "__CLASS__" : "\\lf\\LolitaFramework\\Controls\\Repeater\\CustomizeRepeater",
+                "controls" : [
+                    {
+                        "name"     : "url",
+                        "__TYPE__" : "Text",
+                        "label"    : "Link"
+                    },
+                    {
+                        "name"     : "content",
+                        "__TYPE__" : "Text",
+                        "label"    : "Content"
+                    },
+                    {
+                        "name"     : "icon_css",
+                        "__TYPE__" : "Icons",
+                        "label"    : "Icon css class"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title" : "Contacts",
+        "description" : "This is company contacts",
+        "__CONTROLS__" : [
+            {
+                "label" : "Address",
+                "__SETTINGS__" : {
+                    "default" : "Watishetadres 35"
+                }
+            },
+            {
+                "label" : "Telefoon",
+                "__SETTINGS__" : {
+                    "default" : "038 65 895 655"
+                }
+            },
+            {
+                "label" : "Partnerships",
+                "__SETTINGS__" : {
+                    "default" : "partner@lf.com"
+                }
+            },
+            {
+                "label" : "Sales",
+                "__SETTINGS__" : {
+                    "default" : "sales@lf.com"
+                }
+            },
+            {
+                "label" : "Communication",
+                "__SETTINGS__" : {
+                    "default" : "communication@lf.com"
+                }
+            }
+        ]
+    },
+    "title_tagline",
+    "colors",
+    "header_image",
+    "background_image"
+]

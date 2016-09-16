@@ -1,0 +1,18 @@
+{
+    "product" : "{{ \\lf\\ModelPages::product }}",
+    "industry" : "{{ \\lf\\ModelPages::industry }}",
+    "contact-us" : {
+        "html" : "{{ \\lf\\ModelPages::contact_us }}",
+        "template_name" : "Contact Us"
+    },
+    "download" : {
+        "html" : "{{ \\lf\\ModelPages::download }}",
+        "template_name" : "Download"
+    },
+    "solutions" : {
+        "html" : "{{ \\lf\\ModelPages::solutions }}",
+        "template_name" : "Solutions"
+    },
+    "front" : "{{ \\lf\\ModelPages::home }}",
+    "home" : "{{ \\lf\\ModelPages::home }}"
+}

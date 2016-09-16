@@ -1,0 +1,47 @@
+[
+    {
+        "name"          : "Home content",
+        "id"            : "home_content",
+        "description"   : "Add widgets here.",
+        "before_widget" : "<div id='%1$s' class='widget home_content %2$s'>",
+        "after_widget"  : "</div>",
+        "before_title"  : "<h2 class='widget-title'>",
+        "after_title"   : "</h2>"
+    },
+    {
+        "name"          : "Breadcrumbs",
+        "id"            : "breadcrumbs_area",
+        "description"   : "Add widgets here.",
+        "before_widget" : "<div id='%1$s' class='widget breadcrumbs_area %2$s'>",
+        "after_widget"  : "</div>",
+        "before_title"  : "<h2 class='widget-title'>",
+        "after_title"   : "</h2>"
+    },
+    {
+        "name"          : "Contact form modal window",
+        "id"            : "contact_form_modal_window",
+        "description"   : "Add widgets here.",
+        "before_widget" : "<div id='%1$s' class='widget contact_form_modal_window %2$s'>",
+        "after_widget"  : "</div>",
+        "before_title"  : "<h2 class='widget-title'>",
+        "after_title"   : "</h2>"
+    },
+    {
+        "name"          : "Contact us content area",
+        "id"            : "contact_us_content",
+        "description"   : "Add widgets here.",
+        "before_widget" : "<div id='%1$s' class='widget contact_us_content %2$s'>",
+        "after_widget"  : "</div>",
+        "before_title"  : "<h2 class='widget-title'>",
+        "after_title"   : "</h2>"
+    },
+    {
+        "name"          : "Footer social network area",
+        "id"            : "footer_social_network_area",
+        "description"   : "Add widgets here.",
+        "before_widget" : "<div id='%1$s' class='widget footer_social_network_area %2$s'>",
+        "after_widget"  : "</div>",
+        "before_title"  : "<h2 class='widget-title'>",
+        "after_title"   : "</h2>"
+    }
+]

@@ -1,0 +1,17 @@
+{
+    "deregister_scripts" : [
+        ["jquery"]
+    ],
+    "scripts" : [
+        ["jquery", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/jquery-2.2.4.min.js", [], "1.0", true],
+        ["bootstrap", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/bootstrap.min.js", [], "1.0", true],
+        ["slick", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/slick.min.js", [], "1.0", true],
+        ["general", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/general.js", [], "1.0", true],
+        ["contact_modal", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/contact_modal.js", ["jquery"], "1.0", true],
+        ["lf", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/lf.js", ["jquery"], "1.0", true]
+    ],
+    "styles" : [
+        ["work_sans", "https://fonts.googleapis.com/css?family=Work+Sans:400,800,700,600,500,300", [], "1.0", "all"],
+        ["general", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/css/general.css", [], "1.0", "all"]
+    ]
+}

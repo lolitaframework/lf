@@ -1,0 +1,6 @@
+{
+    "name" : "Lolita breadcrumbs",
+    "description" : "Lolita breadcrumbs widget",
+    "classname" : "lf_breadcrumbs",
+    "view" : ["\\lf\\app\\widgets\\breadcrumbs\\engine\\Engine", "widget"]
+}

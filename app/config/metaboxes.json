@@ -1,0 +1,264 @@
+{
+    "additional" : {
+        "title" : "Additionals",
+        "screen" : "page",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Text",
+                "name" : "sub_title",
+                "label" : "Sub-Title"
+            }
+        ]
+    },
+    "additional_product" : {
+        "title" : "Additional settings",
+        "screen" : "product",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Text",
+                "name" : "sub_title",
+                "label" : "Sub title"
+            },
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "description",
+                "label" : "Small description",
+                "attributes" : {
+                    "rows" : 10
+                }
+            },
+            {
+                "__TYPE__" : "Text",
+                "name" : "pdf",
+                "label" : "PDF"
+            },
+            {
+                "__TYPE__" : "Repeater",
+                "name" : "industries",
+                "label" : "Industries",
+                "controls" : [
+                    {
+                        "__TYPE__" : "Select",
+                        "name" : "industry",
+                        "label" : "Industry",
+                        "options" : ["\\lf\\ModelMain", "industriesSelect"]
+                    }
+                ]
+            }
+        ]
+    },
+    "product_row_1" : {
+        "title" : "Row 1",
+        "screen" : "product",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "content",
+                "label" : "Content",
+                "attributes" : {
+                    "rows" : 10
+                }
+            }
+        ]
+    },
+    "product_row_2" : {
+        "title" : "Row 2",
+        "screen" : "product",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Text",
+                "name" : "title",
+                "label" : "Title"
+            },
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "content",
+                "label" : "Content",
+                "attributes" : {
+                    "rows" : 10
+                }
+            },
+            {
+                "__TYPE__" : "Media",
+                "name" : "image",
+                "label" : "Image"
+            }
+        ]
+    },
+    "product_row_3" : {
+        "title" : "Row 3",
+        "screen" : "product",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Gallery",
+                "name" : "screenshots",
+                "label" : "Screenshots"
+            },
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "content",
+                "label" : "Content",
+                "attributes" : {
+                    "rows" : 10
+                }
+            }
+        ]
+    },
+    "product_row_4" : {
+        "title" : "Row 4",
+        "screen" : "product",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Repeater",
+                "name" : "Info",
+                "label" : "Info",
+                "controls" : [
+                    {
+                        "__TYPE__" : "Text",
+                        "name" : "title",
+                        "label" : "Title"
+                    },
+                    {
+                        "__TYPE__" : "Textarea",
+                        "name" : "content",
+                        "label" : "Content",
+                        "attributes" : {
+                            "rows" : 5
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "additional_industry" : {
+        "title" : "Additional settings",
+        "screen" : "industry",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Text",
+                "name" : "sub_title",
+                "label" : "Sub title"
+            },
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "description",
+                "label" : "Small description",
+                "attributes" : {
+                    "rows" : 10
+                }
+            },
+            {
+                "__TYPE__" : "Text",
+                "name" : "pdf",
+                "label" : "PDF"
+            },
+            {
+                "__TYPE__" : "Repeater",
+                "name" : "solutions",
+                "label" : "Solutions",
+                "controls" : [
+                    {
+                        "__TYPE__" : "Select",
+                        "name" : "product",
+                        "label" : "Product",
+                        "options" : ["\\lf\\ModelMain", "productsSelect"]
+                    }
+                ]
+            }
+        ]
+    },
+    "industry_row_1" : {
+        "title" : "Row 1",
+        "screen" : "industry",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "content",
+                "label" : "Content",
+                "attributes" : {
+                    "rows" : 10
+                }
+            }
+        ]
+    },
+    "industry_row_2" : {
+        "title" : "Row 2",
+        "screen" : "industry",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Text",
+                "name" : "title",
+                "label" : "Title"
+            },
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "content",
+                "label" : "Content",
+                "attributes" : {
+                    "rows" : 10
+                }
+            },
+            {
+                "__TYPE__" : "Media",
+                "name" : "image",
+                "label" : "Image"
+            }
+        ]
+    },
+    "industry_row_3" : {
+        "title" : "Row 3",
+        "screen" : "industry",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Gallery",
+                "name" : "screenshots",
+                "label" : "Screenshots"
+            },
+            {
+                "__TYPE__" : "Textarea",
+                "name" : "content",
+                "label" : "Content",
+                "attributes" : {
+                    "rows" : 10
+                }
+            }
+        ]
+    },
+    "industry_row_4" : {
+        "title" : "Row 4",
+        "screen" : "industry",
+        "priority" : "high",
+        "controls" : [
+            {
+                "__TYPE__" : "Repeater",
+                "name" : "Info",
+                "label" : "Info",
+                "controls" : [
+                    {
+                        "__TYPE__" : "Text",
+                        "name" : "title",
+                        "label" : "Title"
+                    },
+                    {
+                        "__TYPE__" : "Textarea",
+                        "name" : "content",
+                        "label" : "Content",
+                        "attributes" : {
+                            "rows" : 5
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
