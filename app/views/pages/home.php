@@ -41,7 +41,7 @@
                 <div class="l-front-block__w-logo l-front-block__w-logo--visible">
                     <!-- w-logo -->
                     <div class="w-logo">
-                        <a href="#" class="w-logo__link" style="background-image:url('<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/logo.svg');"></a>
+                        <a href="#" class="w-logo__link" style="background-image:url('<?php echo $logo ?>');"></a>
                     </div>
                     <!-- /w-logo -->
                 </div>

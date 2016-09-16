@@ -24,10 +24,6 @@
                 "__CLASS__" : "WP_Customize_Image_Control"
             },
             {
-                "label" : "Background image",
-                "__CLASS__" : "WP_Customize_Image_Control"
-            },
-            {
                 "label" : "Social icons",
                 "__CLASS__" : "\\lf\\LolitaFramework\\Controls\\Repeater\\CustomizeRepeater",
                 "controls" : [
@@ -47,42 +43,6 @@
                         "label"    : "Icon css class"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "title" : "Contacts",
-        "description" : "This is company contacts",
-        "__CONTROLS__" : [
-            {
-                "label" : "Address",
-                "__SETTINGS__" : {
-                    "default" : "Watishetadres 35"
-                }
-            },
-            {
-                "label" : "Telefoon",
-                "__SETTINGS__" : {
-                    "default" : "038 65 895 655"
-                }
-            },
-            {
-                "label" : "Partnerships",
-                "__SETTINGS__" : {
-                    "default" : "partner@lf.com"
-                }
-            },
-            {
-                "label" : "Sales",
-                "__SETTINGS__" : {
-                    "default" : "sales@lf.com"
-                }
-            },
-            {
-                "label" : "Communication",
-                "__SETTINGS__" : {
-                    "default" : "communication@lf.com"
-                }
             }
         ]
     },
