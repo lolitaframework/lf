@@ -1,7 +1,7 @@
 {
     "name" : "Lolita logo widget",
     "description" : "Lolita logo widget",
-    "classname" : "lf_interface_logo",
+    "classname" : "w-logo",
     "controls" : [
         {
             "__TYPE__" : "Text",
