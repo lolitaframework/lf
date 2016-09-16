@@ -3,15 +3,18 @@
         ["jquery"]
     ],
     "scripts" : [
-        ["jquery", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/jquery-2.2.4.min.js", [], "1.0", true],
-        ["bootstrap", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/bootstrap.min.js", [], "1.0", true],
-        ["slick", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/slick.min.js", [], "1.0", true],
-        ["general", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/general.js", [], "1.0", true],
-        ["contact_modal", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/contact_modal.js", ["jquery"], "1.0", true],
-        ["lf", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/lf.js", ["jquery"], "1.0", true]
+        ["jquery", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/jquery-2.2.4.js", [], "1.0", true],
+        ["blocks", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/blocks.common.js", [], "1.0", true],
+        ["multilevel_menu", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/multilevel_menu.js", [], "1.0", true],
+        ["w-menu", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-menu.js", [], "1.0", true],
+        ["w-logo", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-logo.js", ["jquery"], "1.0", true],
+        ["w-search-block", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-search-block.js", ["jquery"], "1.0", true],
+        ["main", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/main.js", ["jquery"], "1.0", true]
     ],
     "styles" : [
-        ["work_sans", "https://fonts.googleapis.com/css?family=Work+Sans:400,800,700,600,500,300", [], "1.0", "all"],
-        ["general", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/css/general.css", [], "1.0", "all"]
+        ["Open sans", "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i", [], "1.0", "all"],
+        ["libs", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/css/libs.css", [], "1.0", "all"],
+        ["blocks", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/css/blocks.common.css", [], "1.0", "all"],
+        ["main", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/css/main.css", [], "1.0", "all"]
     ]
 }
