@@ -41,7 +41,7 @@
                 <div class="l-front-block__w-logo l-front-block__w-logo--visible">
                     <!-- w-logo -->
                     <div class="w-logo">
-                        <a href="#" class="w-logo__link" style="background-image:url('./img/logo.svg');"></a>
+                        <a href="#" class="w-logo__link" style="background-image:url('<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/logo.svg');"></a>
                     </div>
                     <!-- /w-logo -->
                 </div>
@@ -63,7 +63,7 @@
                 <ul class="w-search-block__results">
                     <li class="w-search-block__item">
                         <a href="#" class="w-search-block__link">
-                            <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                            <img class="w-search-block__img" src="<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/i-m-g-0055@3x.png" alt="">
                             <div class="w-search-block__text">
                                 <h3><b>Here is</b> will be title</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
@@ -72,7 +72,7 @@
                     </li>
                     <li class="w-search-block__item">
                         <a href="#" class="w-search-block__link">
-                            <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                            <img class="w-search-block__img" src="<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/i-m-g-0055@3x.png" alt="">
                             <div class="w-search-block__text">
                                 <h3><b>Here is</b> will be title</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
@@ -81,7 +81,7 @@
                     </li>
                     <li class="w-search-block__item">
                         <a href="#" class="w-search-block__link">
-                            <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                            <img class="w-search-block__img" src="<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/i-m-g-0055@3x.png" alt="">
                             <div class="w-search-block__text">
                                 <h3><b>Here is</b> will be title</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
@@ -96,7 +96,7 @@
         <div class="l-full-screen__b-small-logo">
             <!-- b-small-logo -->
             <div class="b-small-logo">
-                <a href="#" class="b-small-logo__item" style="background-image:url('./img/logo.svg');"></a>
+                <a href="#" class="b-small-logo__item" style="background-image:url('<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/logo.svg');"></a>
             </div>
             <!-- /b-small-logo -->
         </div>
