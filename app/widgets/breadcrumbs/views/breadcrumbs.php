@@ -1,6 +1,5 @@
 <?php echo $args['before_widget']; ?>
-    <?php
-     if ($crumbs) : 
+    <?php if ($crumbs) :
         $numItems = count($crumbs);
         $i = 0;
     ?>

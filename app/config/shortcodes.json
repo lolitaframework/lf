@@ -1,14 +1,4 @@
 {
     "header" : ["\\lf\\ModelShortcodes", "header"],
-    "footer" : ["\\lf\\ModelShortcodes", "footer"],
-    "modal_contact" : ["\\lf\\ModelShortcodes", "contact"],
-    "main_sidebar" : ["\\lf\\ModelShortcodes", "main_sidebar"],
-    "sub_menus" : ["\\lf\\ModelShortcodes", "sub_menus"],
-    "footer_inner" : ["\\lf\\ModelShortcodes", "footer_inner"],
-    "footer_menu_1_left" : ["\\lf\\ModelShortcodes", "footer_menu_1_left"],
-    "footer_menu_1_right" : ["\\lf\\ModelShortcodes", "footer_menu_1_right"],
-    "footer_menu_2_left" : ["\\lf\\ModelShortcodes", "footer_menu_2_left"],
-    "footer_menu_2_right" : ["\\lf\\ModelShortcodes", "footer_menu_2_right"],
-    "footer_menu_3" : ["\\lf\\ModelShortcodes", "footer_menu_3"],
-    "footer_menu_4" : ["\\lf\\ModelShortcodes", "footer_menu_4"]
+    "footer" : ["\\lf\\ModelShortcodes", "footer"]
 }

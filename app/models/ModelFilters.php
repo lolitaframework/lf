@@ -2,7 +2,8 @@
 
 namespace lf;
 
-class ModelFilters{
+class ModelFilters
+{
 
     /**
      * upload_mimes Filter.

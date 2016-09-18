@@ -15,7 +15,7 @@ class Engine
      * @return void
      */
     public static function widget($args, $instance)
-    {   
+    {
         add_action('wp_footer', array(__CLASS__, 'enqueue'));
         
         echo View::make(
@@ -27,6 +27,9 @@ class Engine
         );
     }
 
+    /**
+     * Enqueue scripts
+     */
     public static function enqueue()
     {
         $js_url = Url::toUrl(dirname(__DIR__) . DS . 'assets' . DS . 'js' . DS . 'lf_google_map.js');

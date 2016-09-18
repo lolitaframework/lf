@@ -1,7 +1,7 @@
 <?php echo $args['before_widget']; ?>
 <div class="widget slider">
-<?php if (is_array($instance['slides'])): ?>
-    <?php foreach ($instance['slides'] as $slide): ?>
+<?php if (is_array($instance['slides'])) : ?>
+    <?php foreach ($instance['slides'] as $slide) : ?>
         <div class="slider__item">
             <div class="slider__item__txt1">
                 <p><?php echo $slide['subtitle'] ?></p>
