@@ -1,7 +1,7 @@
 {
     "name" : "Lolita menu",
     "description" : "Lolita menu widget",
-    "classname" : "lf_menu",
+    "classname" : "w-menu",
     "controls" : [
         {
             "name"     : "title",
@@ -11,7 +11,8 @@
         {
             "name"     : "location",
             "__TYPE__" : "Select",
-            "label"    : "Location"
+            "label"    : "Location",
+            "options"  : ["\\lf\\app\\widgets\\menu\\engine\\Engine", "locations"]
         }
     ]
 }
