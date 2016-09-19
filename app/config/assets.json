@@ -3,6 +3,7 @@
         ["jquery"]
     ],
     "scripts" : [
+        ["shortcode"],
         ["jquery", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/jquery-2.2.4.js", [], "1.0", true],
         ["blocks", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/blocks.common.js", [], "1.0", true],
         ["multilevel_menu", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/multilevel_menu.js", [], "1.0", true],

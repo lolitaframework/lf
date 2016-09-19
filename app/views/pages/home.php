@@ -97,7 +97,7 @@
         <div class="l-full-screen__b-small-logo">
             <!-- b-small-logo -->
             <div class="b-small-logo">
-                <a href="#" class="b-small-logo__item" style="background-image:url('<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/logo.svg');"></a>
+                <a href="#" class="b-small-logo__item" style="background-image:url('<?php echo $logo ?>');"></a>
             </div>
             <!-- /b-small-logo -->
         </div>
