@@ -3,6 +3,7 @@
 namespace lf\app\widgets\menu\engine;
 
 use \lf\LolitaFramework\Core\Arr;
+use \lf\LolitaFramework\Core\View;
 
 class Engine
 {
@@ -22,11 +23,36 @@ class Engine
     /**
      * Get menu
      */
-    public static function getMenu($location = '')
+    public static function menu($menu_id = '')
     {
-        if ($location > 0) {
+        if ($menu_id > 0) {
             return wp_get_nav_menu_items($menu_id);
         }
         return false;
+    }
+
+    /**
+     * Render the google map widget
+     *
+     * @param  array $args
+     * @param  array $instance
+     * @return void
+     */
+    public static function widget($args, $instance)
+    {
+        $items = array();
+        if (array_key_exists('location', $instance)) {
+            $location = $instance['location'];
+            $items = self::menu($location);
+        }
+        echo View::make(
+            dirname(__DIR__).DS.'views'.DS.'menu.php',
+            array(
+                'args'     => $args,
+                'instance' => $instance,
+                'items'    => $items,
+                'menu'     => new Menu($items),
+            )
+        );
     }
 }

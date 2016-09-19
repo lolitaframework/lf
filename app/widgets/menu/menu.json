@@ -2,6 +2,7 @@
     "name" : "Lolita menu",
     "description" : "Lolita menu widget",
     "classname" : "w-menu",
+    "view" : ["\\lf\\app\\widgets\\menu\\engine\\Engine", "widget"],
     "controls" : [
         {
             "name"     : "title",

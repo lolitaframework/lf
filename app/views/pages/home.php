@@ -5,8 +5,9 @@
         <div class="l-full-screen__l-front-block">
             <div class="l-front-block">
                 <div class="l-front-block__w-menu">
+                    <?php echo do_shortcode('[lolita-menu_sc]{"instance" : { "location" : "2" } }[/lolita-menu_sc]'); ?>
                     <!-- w-menu -->
-                    <div class="w-menu">
+                    <!-- <div class="w-menu">
                         <nav>
                             <ul class="w-menu__container">
                                 <li class="w-menu__item w-menu__item--has_submenu">
@@ -35,7 +36,7 @@
                                 <li class="w-menu__item"><a href="#" class="w-menu__link w-menu__link--search">Search</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                     <!-- /w-menu -->
                 </div>
                 <div class="l-front-block__w-logo l-front-block__w-logo--visible">
