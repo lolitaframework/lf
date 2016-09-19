@@ -1,0 +1,17 @@
+{
+    "name" : "Lolita menu",
+    "description" : "Lolita menu widget",
+    "classname" : "lf_menu",
+    "controls" : [
+        {
+            "name"     : "title",
+            "__TYPE__" : "Text",
+            "label"    : "Title"
+        },
+        {
+            "name"     : "location",
+            "__TYPE__" : "Select",
+            "label"    : "Location"
+        }
+    ]
+}

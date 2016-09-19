@@ -2,6 +2,7 @@
 namespace lf\LolitaFramework\Controls;
 
 use \lf\LolitaFramework\Core\Arr;
+use \lf\LolitaFramework\Core\Data;
 use \lf\LolitaFramework\Core\Cls;
 use \lf\LolitaFramework\Core\View;
 
@@ -85,6 +86,7 @@ class Controls
             if (Arr::exists($arguments, 'old_name')) {
                 $control->old_name = $arguments['old_name'];
             }
+
             if (null !== $control) {
                 $this->collection[ $arguments['name'] ] = $control;
             }

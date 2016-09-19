@@ -39,7 +39,6 @@
                     <!-- /w-menu -->
                 </div>
                 <div class="l-front-block__w-logo l-front-block__w-logo--visible">
-                    <?php echo do_shortcode('[lolita-logo-widget_sc]'); ?>
                     <!-- w-logo -->
                     <div class="w-logo">
                         <a href="#" class="w-logo__link" style="background-image:url('<?php echo $logo ?>');"></a>
