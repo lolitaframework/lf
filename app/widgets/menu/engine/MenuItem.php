@@ -28,11 +28,11 @@ class MenuItem
      * Has submenu
      *
      * @return boolean
-     * 
+     *
      */
     public function hasSubmenu()
     {
-        return array_key_exists($this->me->ID, (array) $this->menu->getGraph() );
+        return array_key_exists($this->me->ID, (array) $this->menu->getGraph());
     }
 
     /**
