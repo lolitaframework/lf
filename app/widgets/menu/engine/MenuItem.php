@@ -2,6 +2,8 @@
 
 namespace lf\app\widgets\menu\engine;
 
+use \lf\LolitaFramework\Core\View;
+
 class MenuItem
 {
     /**

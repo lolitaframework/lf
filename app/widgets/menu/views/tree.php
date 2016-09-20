@@ -1,4 +1,3 @@
 <nav>
-    <ul class="w-menu__container">
-    </ul>
+    <?php echo $ul ?>
 </nav>
