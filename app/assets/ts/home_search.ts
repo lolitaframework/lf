@@ -16,10 +16,17 @@ namespace LolitaFramework {
         handler: any = null;
 
         /**
+         * Search item template
+         * @type {any}
+         */
+        tmpl: any = null;
+
+        /**
          * Constructor
          */
         constructor() {
             this.ajax = (<any>window).wp.ajax;
+            this.tmpl = ()
             jQuery(document).on(
                 'keyup',
                 '.b-search-form__input',
