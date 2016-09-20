@@ -6,38 +6,6 @@
             <div class="l-front-block">
                 <div class="l-front-block__w-menu">
                     <?php echo do_shortcode('[lolita-menu_sc]{"instance" : { "location" : "2" } }[/lolita-menu_sc]'); ?>
-                    <!-- w-menu -->
-                    <!-- <div class="w-menu">
-                        <nav>
-                            <ul class="w-menu__container">
-                                <li class="w-menu__item w-menu__item--has_submenu">
-                                    <a href="#" class="w-menu__link">Docs</a>
-                                    <ul class="w-menu__sub-menu">
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration</a>
-                                        </li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core</a></li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-menu__item w-menu__item--has_submenu">
-                                    <a href="#" class="w-menu__link">About me</a>
-                                    <ul class="w-menu__sub-menu">
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration1</a></li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core1</a></li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls1</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-menu__item w-menu__item--has_submenu">
-                                    <a href="#" class="w-menu__link">Our works</a>
-                                    <ul class="w-menu__sub-menu">
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-menu__item"><a href="#" class="w-menu__link w-menu__link--search">Search</a></li>
-                            </ul>
-                        </nav>
-                    </div> -->
-                    <!-- /w-menu -->
                 </div>
                 <div class="l-front-block__w-logo l-front-block__w-logo--visible">
                     <!-- w-logo -->
@@ -60,7 +28,7 @@
                     </form>
                     <!-- /b-search-form -->
                 </div>
-                
+                <?php echo $tmpl_search_item ?>
                 <ul class="w-search-block__results">
                     <li class="w-search-block__item">
                         <a href="#" class="w-search-block__link">
