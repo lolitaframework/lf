@@ -59,6 +59,11 @@ namespace LolitaFramework {
             promise.done((response:any) => this.searchDone(response));
         }
 
+        /**
+         * Ajax promise done
+         *
+         * @param {any} response
+         */
         searchDone(response:any){
             console.log(response);
         }

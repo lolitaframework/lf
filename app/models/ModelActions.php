@@ -11,6 +11,6 @@ class ModelActions
      */
     public static function search()
     {
-        wp_send_json_success( $_POST );
+        wp_send_json_success($_POST);
     }
 }
