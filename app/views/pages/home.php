@@ -30,33 +30,6 @@
                 </div>
                 <?php echo $tmpl_search_item ?>
                 <ul class="w-search-block__results">
-                    <li class="w-search-block__item">
-                        <a href="#" class="w-search-block__link">
-                            <img class="w-search-block__img" src="<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/i-m-g-0055@3x.png" alt="">
-                            <div class="w-search-block__text">
-                                <h3><b>Here is</b> will be title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="w-search-block__item">
-                        <a href="#" class="w-search-block__link">
-                            <img class="w-search-block__img" src="<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/i-m-g-0055@3x.png" alt="">
-                            <div class="w-search-block__text">
-                                <h3><b>Here is</b> will be title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="w-search-block__item">
-                        <a href="#" class="w-search-block__link">
-                            <img class="w-search-block__img" src="<?php echo \lf\LolitaFramework::baseUrl() ?>/app/assets/img/i-m-g-0055@3x.png" alt="">
-                            <div class="w-search-block__text">
-                                <h3><b>Here is</b> will be title</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
                 <button class="w-search-block__close">Close</button>
             </div>

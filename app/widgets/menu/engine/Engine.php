@@ -41,9 +41,13 @@ class Engine
     public static function widget($args, $instance)
     {
         $items = array();
+        $menu  = false;
         if (array_key_exists('location', $instance)) {
             $location = $instance['location'];
             $items = self::menu($location);
+        }
+        if (count($items) && is_array($items)) {
+            $menu = new Menu($items);
         }
         echo View::make(
             dirname(__DIR__).DS.'views'.DS.'menu.php',
@@ -51,7 +55,7 @@ class Engine
                 'args'     => $args,
                 'instance' => $instance,
                 'items'    => $items,
-                'menu'     => new Menu($items),
+                'menu'     => $menu,
             )
         );
     }

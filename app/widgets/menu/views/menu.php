@@ -5,7 +5,9 @@
     <div class="w-menu">
 <?php endif ?>
 
-<?php echo $menu->render() ?>
+<?php if ($menu !== false) : ?>
+    <?php echo $menu->render() ?>
+<?php endif ?>
 
 <?php if (array_key_exists('after_widget', $args)) : ?>
     <?php echo $args['after_widget'] ?>
