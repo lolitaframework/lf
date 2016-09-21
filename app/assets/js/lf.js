@@ -17,7 +17,7 @@ var LolitaFramework;
             if (this.handler) {
                 clearTimeout(this.handler);
             }
-            this.handler = setTimeout(function () { return _this.search(value); }, 1000);
+            this.handler = setTimeout(function () { return _this.search(value); }, 200);
         };
         HomeSearch.prototype.search = function (value) {
             var _this = this;

@@ -46,7 +46,7 @@ namespace LolitaFramework {
             }
             this.handler = setTimeout(
                 () => this.search(value),
-                1000
+                200
             );
         }
 
