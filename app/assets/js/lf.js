@@ -27,21 +27,17 @@ var LolitaFramework;
                 nonce: window.lolita_framework.LF_NONCE,
                 s: value
             });
-            promise.done(function (response) { return _this.searchDone(response); });
+            promise.done(function (response) { return _this.searchDone(response, value); });
         };
-        HomeSearch.prototype.searchDone = function (response) {
-            var i, data;
-            data = {
-                url: 'some url',
-                img: 'some img',
-                content: 'some content',
-                title: 'some title'
-            };
+        HomeSearch.prototype.searchDone = function (response, value) {
+            var i, el;
             jQuery('.w-search-block__results').empty();
             if (response.items.length) {
                 for (i = 0; i < response.items.length; i++) {
-                    console.log(this.tmpl(response.items[i]), this.tmpl(data));
-                    jQuery('.w-search-block__results').append(this.tmpl(response.items[i]));
+                    el = response.items[i];
+                    el.title = el.title.replace(new RegExp(value, 'gi'), '<b>' + value + '</b>');
+                    el.content = el.content.replace(new RegExp(value, 'gi'), '<b>' + value + '</b>');
+                    jQuery('.w-search-block__results').append(this.tmpl(el));
                 }
             }
         };

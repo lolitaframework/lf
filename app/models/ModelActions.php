@@ -3,6 +3,7 @@
 namespace lf;
 
 use \lf\LolitaFramework\Core\Arr;
+use \lf\LolitaFramework\Core\Img;
 
 class ModelActions
 {
@@ -34,6 +35,9 @@ class ModelActions
                 'content' => $item->post_content,
                 'img'     => '',
             );
+            if (has_post_thumbnail($item->ID)) {
+                $el['img'] = Img::url(get_post_thumbnail_id($item->ID));
+            }
             $return[] = $el;
         }
 

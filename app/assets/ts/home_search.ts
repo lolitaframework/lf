@@ -63,7 +63,7 @@ namespace LolitaFramework {
                 s: value
             });
 
-            promise.done((response:any) => this.searchDone(response));
+            promise.done((response:any) => this.searchDone(response, value));
         }
 
         /**
@@ -71,17 +71,18 @@ namespace LolitaFramework {
          *
          * @param {any} response
          */
-        searchDone(response:any){
-            var i:number;
+        searchDone(response:any, value:string){
+            var i:number, el:any;
 
             jQuery('.w-search-block__results').empty();
 
             if (response.items.length) {
                 for (i = 0; i < response.items.length; i++) {
-                    console.log(
-                        this.tmpl(response.items[i]), this.tmpl(data)
-                    );
-                    jQuery('.w-search-block__results').append(this.tmpl(response.items[i]));
+                    el         = response.items[i];
+                    el.title   = el.title.replace(new RegExp(value, 'gi'), '<b>' + value + '</b>');
+                    el.content = el.content.replace(new RegExp(value, 'gi'), '<b>' + value + '</b>');
+
+                    jQuery('.w-search-block__results').append(this.tmpl(el));
                 }
             }
         }

@@ -5,8 +5,8 @@
                 <img class="w-search-block__img" src="{{ data.img }}" alt="">
             <# } #>
             <div class="w-search-block__text">
-                <h3>{{ data.title }}</h3>
-                <p>{{ data.content }}</p>
+                <h3>{{{ data.title }}}</h3>
+                <p>{{{ data.content }}}</p>
             </div>
         </a>
     </li>
