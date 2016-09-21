@@ -24,10 +24,22 @@ class ModelActions
             'suppress_filters' => true,
             's'                => Arr::get($_POST, 's')
         );
+        $items  = get_posts($args);
+        $return = array();
+
+        foreach ($items as &$item) {
+            $el = array(
+                'url'     => get_permalink($item->ID),
+                'title'   => get_the_title($item->ID),
+                'content' => $item->post_content,
+                'img'     => '',
+            );
+            $return[] = $el;
+        }
 
         wp_send_json_success(
             array(
-                'posts' => get_posts($args)
+                'items' => $return
             )
         );
     }

@@ -1,14 +1,16 @@
 var LolitaFramework;
 (function (LolitaFramework) {
-    var LF = (function () {
-        function LF() {
+    var HomeSearch = (function () {
+        function HomeSearch() {
             var _this = this;
             this.ajax = null;
             this.handler = null;
+            this.tmpl = null;
             this.ajax = window.wp.ajax;
+            this.tmpl = window.wp.template('search-item');
             jQuery(document).on('keyup', '.b-search-form__input', function (e) { return _this.searchInputKeyup(e); });
         }
-        LF.prototype.searchInputKeyup = function (e) {
+        HomeSearch.prototype.searchInputKeyup = function (e) {
             var _this = this;
             var value;
             value = jQuery(e.currentTarget).val();
@@ -17,7 +19,7 @@ var LolitaFramework;
             }
             this.handler = setTimeout(function () { return _this.search(value); }, 1000);
         };
-        LF.prototype.search = function (value) {
+        HomeSearch.prototype.search = function (value) {
             var _this = this;
             var promise;
             promise = this.ajax.post({
@@ -27,12 +29,13 @@ var LolitaFramework;
             });
             promise.done(function (response) { return _this.searchDone(response); });
         };
-        LF.prototype.searchDone = function (response) {
-            console.log(response);
+        HomeSearch.prototype.searchDone = function (response) {
+            jQuery('.w-search-block__results').empty();
+            console.log(response.items);
         };
-        return LF;
+        return HomeSearch;
     }());
-    LolitaFramework.LF = LF;
-    window.LolitaFramework.softexpert = new LF();
+    LolitaFramework.HomeSearch = HomeSearch;
+    window.LolitaFramework.home_search = new HomeSearch();
 })(LolitaFramework || (LolitaFramework = {}));
 //# sourceMappingURL=lf.js.map

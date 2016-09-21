@@ -26,7 +26,7 @@ namespace LolitaFramework {
          */
         constructor() {
             this.ajax = (<any>window).wp.ajax;
-            this.tmpl = ()
+            this.tmpl = (<any>window).wp.template('search-item');
             jQuery(document).on(
                 'keyup',
                 '.b-search-form__input',
@@ -72,7 +72,9 @@ namespace LolitaFramework {
          * @param {any} response
          */
         searchDone(response:any){
-            console.log(response);
+            jQuery('.w-search-block__results').empty();
+
+            console.log(response.items);
         }
     }
 
