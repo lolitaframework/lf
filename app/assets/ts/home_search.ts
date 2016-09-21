@@ -72,9 +72,18 @@ namespace LolitaFramework {
          * @param {any} response
          */
         searchDone(response:any){
+            var i:number;
+
             jQuery('.w-search-block__results').empty();
 
-            console.log(response.items);
+            if (response.items.length) {
+                for (i = 0; i < response.items.length; i++) {
+                    console.log(
+                        this.tmpl(response.items[i]), this.tmpl(data)
+                    );
+                    jQuery('.w-search-block__results').append(this.tmpl(response.items[i]));
+                }
+            }
         }
     }
 

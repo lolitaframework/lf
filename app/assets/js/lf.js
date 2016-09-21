@@ -30,8 +30,20 @@ var LolitaFramework;
             promise.done(function (response) { return _this.searchDone(response); });
         };
         HomeSearch.prototype.searchDone = function (response) {
+            var i, data;
+            data = {
+                url: 'some url',
+                img: 'some img',
+                content: 'some content',
+                title: 'some title'
+            };
             jQuery('.w-search-block__results').empty();
-            console.log(response.items);
+            if (response.items.length) {
+                for (i = 0; i < response.items.length; i++) {
+                    console.log(this.tmpl(response.items[i]), this.tmpl(data));
+                    jQuery('.w-search-block__results').append(this.tmpl(response.items[i]));
+                }
+            }
         };
         return HomeSearch;
     }());
