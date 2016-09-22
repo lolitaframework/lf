@@ -4,6 +4,7 @@ namespace lf;
 
 use \lf\LolitaFramework\Core\Arr;
 use \lf\LolitaFramework\Core\Img;
+use \lf\LolitaFramework\Core\Decorators\Post;
 
 class ModelActions
 {
@@ -14,7 +15,10 @@ class ModelActions
      */
     public static function search()
     {
-        check_ajax_referer('Lolita Framework', 'nonce');
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+        //check_ajax_referer('Lolita Framework', 'nonce');
         $args = array(
             'posts_per_page'   => 3,
             'offset'           => 0,
@@ -29,15 +33,16 @@ class ModelActions
         $return = array();
 
         foreach ($items as &$item) {
+            $p = new Post($item);
             $el = array(
-                'url'     => get_permalink($item->ID),
-                'title'   => get_the_title($item->ID),
-                'content' => $item->post_content,
-                'img'     => '',
+                'url'     => $p->link(),
+                'title'   => $p->title(),
+                'content' => $p->content(255),
+                'img'     => $p->img(),
             );
-            if (has_post_thumbnail($item->ID)) {
-                $el['img'] = Img::url(get_post_thumbnail_id($item->ID));
-            }
+            // if (has_post_thumbnail($item->ID)) {
+            //     $el['img'] = Img::url(get_post_thumbnail_id($item->ID));
+            // }
             $return[] = $el;
         }
 
