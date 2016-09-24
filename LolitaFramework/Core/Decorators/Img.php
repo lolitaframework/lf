@@ -3,6 +3,7 @@
 namespace lf\LolitaFramework\Core\Decorators;
 
 use \lf\LolitaFramework\Core\Str;
+use \Exception;
 
 class Img
 {
@@ -35,10 +36,19 @@ class Img
     public function __construct($iid)
     {
         if (!is_integer($iid) || $iid <= 0) {
-            throw new Exception('Incorrect image id!');
+            $this->ID = false;
         }
         $this->ID = $iid;
-        wp_get_attachment_image_src($attachment_id, $size, true);
+    }
+
+    /**
+     * Image ID is correct
+     *
+     * @return boolean
+     */
+    public function isInitialized()
+    {
+        return is_integer($this->ID);
     }
 
     /**
@@ -50,9 +60,11 @@ class Img
      */
     public function data($index = 0, $size = 'thumbnail')
     {
-        $img = image_downsize($this->ID, $size);
-        if (is_array($img)) {
-            return $img[0];
+        if ($this->isInitialized()) {
+            $img = image_downsize($this->ID, $size);
+            if (is_array($img)) {
+                return $img[ $index ];
+            }
         }
         return false;
     }
@@ -95,7 +107,18 @@ class Img
      *
      * @return string alt text stored in WordPress
      */
-    public function alt() {
+    public function alt()
+    {
         return trim(strip_tags(get_post_meta($this->ID, '_wp_attachment_image_alt', true)));
+    }
+
+    /**
+     * Convert object to string
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->src();
     }
 }

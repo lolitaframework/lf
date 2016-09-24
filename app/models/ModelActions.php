@@ -38,11 +38,8 @@ class ModelActions
                 'url'     => $p->link(),
                 'title'   => $p->title(),
                 'content' => $p->content(255),
-                'img'     => $p->img(),
+                'img'     => $p->img()->src('65x65'),
             );
-            // if (has_post_thumbnail($item->ID)) {
-            //     $el['img'] = Img::url(get_post_thumbnail_id($item->ID));
-            // }
             $return[] = $el;
         }
 

@@ -202,9 +202,7 @@ class Post
     public function img()
     {
         $tid = get_post_thumbnail_id($this->ID);
-        if ($tid) {
-            return $tid;
-        }
+        return new Img((int) $tid);
     }
 
 
