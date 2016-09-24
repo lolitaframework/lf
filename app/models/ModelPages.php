@@ -22,4 +22,19 @@ class ModelPages
             )
         );
     }
+
+    /**
+     * 404 page
+     */
+    public static function page404()
+    {
+        return View::make(
+            'pages' . DS . '404',
+            array(
+                'logo' => get_theme_mod(
+                    'general_site_settings_upload_a_logo'
+                ),
+            )
+        );
+    }
 }
