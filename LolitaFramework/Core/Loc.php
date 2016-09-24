@@ -78,6 +78,18 @@ class Loc
     }
 
     /**
+     * Get $wpdb
+     *
+     * @author Guriev Eugen <gurievcreative@gmail.com>
+     * @return wpdb instance.
+     */
+    public static function wpdb()
+    {
+        global $wpdb;
+        return $wpdb;
+    }
+
+    /**
      * LolitaFramework instance
      *
      * @author Guriev Eugen <gurievcreative@gmail.com>

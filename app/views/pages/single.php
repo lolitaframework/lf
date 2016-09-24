@@ -52,7 +52,7 @@
                         <div class="b-categories">
                             <nav>
                                 <ul class="b-categories__list">
-                                    <?php foreach ((array) $p->categories() as $cat): ?>
+                                    <?php foreach ((array) $p->categories as $cat) : ?>
                                         <li class="b-categories__list__item">
                                             <a class="b-categories__list__item__link" href="<?php echo get_term_link($cat->term_id) ?>"><?php echo $cat->name ?></a>
                                         </li>
