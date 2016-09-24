@@ -316,13 +316,10 @@ class Post
             }
         }
         $term_class_objects = array();
-
         foreach ($taxonomies as $taxonomy) {
             $terms = wp_get_post_terms($this->ID, $taxonomy);
-
-            if (is_wp_error($terms)) {
-                throw new Exception("Error retrieving terms for taxonomy '$taxonomy' on a post in timber-post.php. WP_Error:" . $terms->get_error_message());
-                return $term_class_objects;
+            if (!$terms || is_wp_error($terms)) {
+                $terms = array();
             }
 
             if ( $merge && is_array($terms) ) {
@@ -332,6 +329,34 @@ class Post
             }
         }
         return $term_class_objects;
+    }
+
+    /**
+     * Get one category
+     *
+     * @return mixed
+     */
+    public function category()
+    {
+        $cats = $this->categories;
+        if ( count($cats) && isset($cats[0]) ) {
+            return $cats[0];
+        }
+        return false;
+    }
+
+    /**
+     * Get one tags
+     *
+     * @return mixed
+     */
+    public function tags()
+    {
+        $tags = $this->tags;
+        if ( count($tags) && isset($tags[0]) ) {
+            return $tags[0];
+        }
+        return false;
     }
 
     /**
@@ -517,5 +542,31 @@ class Post
             update_post_meta($this->ID, $field, $value);
         }
         return $this;
+    }
+
+    /**
+     * Get related posts
+     *
+     * @param  string $taxonomies
+     * @return array
+     */
+    public function relatedPosts($taxonomies = '', array $args = array())
+    {
+        $terms = $this->terms($taxonomies, true);
+        $args = array_merge(
+            array(
+                'posts_per_page'   => -1,
+                'offset'           => 0,
+                'exclude'          => $this->ID,
+                'orderby'          => 'date',
+                'order'            => 'DESC',
+                'post_type'        => 'post',
+                'post_status'      => 'publish',
+                'suppress_filters' => true,
+                'tax_query'        => Term::termsToQuery($terms),
+            ),
+            $args
+        );
+        return get_posts($args);
     }
 }

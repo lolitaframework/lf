@@ -90,6 +90,16 @@
             </div>
             <!-- /b-article -->
         </div>
+        <?php
+        echo '<pre>';
+        var_dump(
+            $p->relatedPosts(
+                'any',
+                array('posts_per_page'   => 3)
+            )
+        );
+        echo '</pre>';
+        ?>
         <div class="l-content__row">
             <!-- b-might-like -->
             <div class="b-might-like">
