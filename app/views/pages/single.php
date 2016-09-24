@@ -90,45 +90,8 @@
             </div>
             <!-- /b-article -->
         </div>
-        <?php
-        echo '<pre>';
-        var_dump(
-            $p->relatedPosts(
-                'any',
-                array('posts_per_page'   => 3)
-            )
-        );
-        echo '</pre>';
-        ?>
         <div class="l-content__row">
-            <!-- b-might-like -->
-            <div class="b-might-like">
-                <h2 class="b-might-like__title">You might also like</h2>
-                <ul class="b-might-like__items">
-                    <li class="b-might-like__item">
-                        <a href="#" class="b-might-like__item__link">
-                            <img src="./img/b-might-like-1.png" class="b-might-like__item__image" alt="">
-                            <h4 class="b-might-like__item__caption">Some article title</h4>
-                            <div class="b-might-like__item__meta">July 28 2016</div>
-                        </a>
-                    </li>
-                    <li class="b-might-like__item">
-                        <a href="#" class="b-might-like__item__link">
-                            <img src="./img/b-might-like-2.png" class="b-might-like__item__image" alt="">
-                            <h4 class="b-might-like__item__caption">Some article title</h4>
-                            <div class="b-might-like__item__meta">July 28 2016</div>
-                        </a>
-                    </li>
-                    <li class="b-might-like__item">
-                        <a href="#" class="b-might-like__item__link">
-                            <img src="./img/b-might-like-3.png" class="b-might-like__item__image" alt="">
-                            <h4 class="b-might-like__item__caption">Some article title</h4>
-                            <div class="b-might-like__item__meta">July 28 2016</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /b-might-like -->
+            <?php echo do_shortcode('[b-might-like pid="' . $p->ID . '"]'); ?>
         </div>
         <div class="l-content__row">
             <!-- b-comments -->

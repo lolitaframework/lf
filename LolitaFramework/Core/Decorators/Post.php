@@ -322,10 +322,10 @@ class Post
                 $terms = array();
             }
 
-            if ( $merge && is_array($terms) ) {
+            if ($merge && is_array($terms)) {
                 $term_class_objects = array_merge($term_class_objects, $terms);
-            } else if ( count($terms) ) {
-                $term_class_objects[$taxonomy] = $terms;
+            } else if (count($terms)) {
+                $term_class_objects[ $taxonomy ] = $terms;
             }
         }
         return $term_class_objects;
@@ -339,7 +339,7 @@ class Post
     public function category()
     {
         $cats = $this->categories;
-        if ( count($cats) && isset($cats[0]) ) {
+        if (count($cats) && isset($cats[0])) {
             return $cats[0];
         }
         return false;
@@ -353,7 +353,7 @@ class Post
     public function tags()
     {
         $tags = $this->tags;
-        if ( count($tags) && isset($tags[0]) ) {
+        if (count($tags) && isset($tags[0])) {
             return $tags[0];
         }
         return false;
@@ -552,8 +552,9 @@ class Post
      */
     public function relatedPosts($taxonomies = '', array $args = array())
     {
-        $terms = $this->terms($taxonomies, true);
-        $args = array_merge(
+        $return = array();
+        $terms  = $this->terms($taxonomies, true);
+        $args   = array_merge(
             array(
                 'posts_per_page'   => -1,
                 'offset'           => 0,
@@ -567,6 +568,10 @@ class Post
             ),
             $args
         );
-        return get_posts($args);
+        $posts = get_posts($args);
+        foreach ($posts as $p) {
+            $return[] = new self($p);
+        }
+        return $return;
     }
 }

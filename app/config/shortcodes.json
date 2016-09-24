@@ -1,5 +1,6 @@
 {
     "header" : ["\\lf\\ModelShortcodes", "header"],
     "footer" : ["\\lf\\ModelShortcodes", "footer"],
-    "b-small-logo" : ["\\lf\\ModelShortcodes", "bSmallLogo"]
+    "b-small-logo" : ["\\lf\\ModelShortcodes", "bSmallLogo"],
+    "b-might-like" : ["\\lf\\ModelShortcodes", "bMightLike"]
 }
