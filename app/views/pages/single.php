@@ -25,35 +25,7 @@
                             <!-- /b-search-form -->
                         </div>
                         <?php echo $tmpl_search_item ?>
-                        <ul class="w-search-block__results">
-                            <li class="w-search-block__item">
-                                <a href="#" class="w-search-block__link">
-                                    <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
-                                    <div class="w-search-block__text">
-                                        <h3><b>Here is</b> will be title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="w-search-block__item">
-                                <a href="#" class="w-search-block__link">
-                                    <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
-                                    <div class="w-search-block__text">
-                                        <h3><b>Here is</b> will be title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="w-search-block__item">
-                                <a href="#" class="w-search-block__link">
-                                    <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
-                                    <div class="w-search-block__text">
-                                        <h3><b>Here is</b> will be title</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <ul class="w-search-block__results"></ul>
                         <button class="w-search-block__close">Close</button>
                     </div>
                     <!-- /w-search-block -->
@@ -80,17 +52,19 @@
                         <div class="b-categories">
                             <nav>
                                 <ul class="b-categories__list">
-                                    <li class="b-categories__list__item"><a class="b-categories__list__item__link" href="#">Core</a></li>
-                                    <li class="b-categories__list__item"><a class="b-categories__list__item__link" href="#">Widgets</a></li>
-                                    <li class="b-categories__list__item"><a class="b-categories__list__item__link" href="#">Category</a></li>
+                                    <?php foreach ((array) $p->categories() as $cat): ?>
+                                        <li class="b-categories__list__item">
+                                            <a class="b-categories__list__item__link" href="<?php echo get_term_link($cat->term_id) ?>"><?php echo $cat->name ?></a>
+                                        </li>
+                                    <?php endforeach ?>
                                  </ul>
                             </nav>
                         </div>
                         <!-- /b-categories -->
                     </div>
-                    <h1 class="b-article__header__title">Lolita Framework</h1>
+                    <h1 class="b-article__header__title"><?php echo $p->title() ?></h1>
                     <div class="b-article__header__meta">
-                        Posted on July 28 2016
+                        <?php _e('Posted on ', 'lf') ?><?php echo $p->date() ?>
                     </div>
                 </header>
                 <div class="b-article__content">

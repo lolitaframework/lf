@@ -215,4 +215,54 @@ class Post
     {
         return apply_filters('the_title', $this->post_title, $this->ID);
     }
+
+    /**
+     * Get the terms associated with the post
+     * This goes across all taxonomies by default
+     *
+     * @param  string|array $tax What taxonom(y|ies) to pull from. Defaults to all registered taxonomies for the post type. You can use custom ones, or built-in WordPress taxonomies (category, tag). Timber plays nice and figures out that tag/tags/post_tag are all the same (and categories/category), for custom taxonomies you're on your own.
+     * @param bool $merge Should the resulting array be one big one (true)? Or should it be an array of sub-arrays for each taxonomy (false)?
+     * @return array
+     */
+    public function terms($tax = '', $merge = false)
+    {
+        $taxonomies = array();
+        if (is_array($tax)) {
+            $taxonomies = $tax;
+        }
+        if (is_string($tax)) {
+            if (in_array($tax, array('all', 'any', ''))) {
+                $taxonomies = get_object_taxonomies($this->post_type);
+            } else {
+                $taxonomies = array($tax);
+            }
+        }
+        $term_class_objects = array();
+
+        foreach ($taxonomies as $taxonomy) {
+            $terms = wp_get_post_terms($this->ID, $taxonomy);
+
+            if (is_wp_error($terms)) {
+                throw new Exception("Error retrieving terms for taxonomy '$taxonomy' on a post in timber-post.php. WP_Error:" . $terms->get_error_message());
+                return $term_class_objects;
+            }
+
+            if ( $merge && is_array($terms) ) {
+                $term_class_objects = array_merge($term_class_objects, $terms);
+            } else if ( count($terms) ) {
+                $term_class_objects[$taxonomy] = $terms;
+            }
+        }
+        return $term_class_objects;
+    }
+
+    /**
+     * Get the categoires on a particular post
+     *
+     * @return array
+     */
+    public function categories()
+    {
+        return $this->terms('category', true);
+    }
 }
