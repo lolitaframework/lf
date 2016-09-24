@@ -24,7 +24,7 @@
                             </form>
                             <!-- /b-search-form -->
                         </div>
-                        
+                        <?php echo $tmpl_search_item ?>
                         <ul class="w-search-block__results">
                             <li class="w-search-block__item">
                                 <a href="#" class="w-search-block__link">

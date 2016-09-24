@@ -46,6 +46,7 @@ class ModelPages
                 ),
                 'p' => new Post(get_post()),
                 'inner_menu' => View::make('json' . DS . 'inner_menu'),
+                'tmpl_search_item' => View::make('tmpl' . DS . 'search_item'),
             )
         );
     }
