@@ -11,11 +11,7 @@
             <!-- /b-attachment -->
         </div>
         <div class="l-full-screen__b-small-logo l-full-screen__b-small-logo--visible">
-            <!-- b-small-logo -->
-            <div class="b-small-logo">
-                <a href="<?php echo home_url() ?>" class="b-small-logo__item" style="background-image:url('<?php echo $logo ?>');"></a>
-            </div>
-            <!-- /b-small-logo -->
+            <?php echo do_shortcode('[b-small-logo]') ?>
         </div>
     </section>
     <!-- /l-full-screen -->

@@ -6,11 +6,13 @@
         ["shortcode"],
         ["wp-util"],
         ["jquery", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/jquery-2.2.4.js", [], "1.0", true],
+        ["jquery.sly", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/jquery.sly.min.js", ["jquery"], "1.0", true],
         ["blocks", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/blocks.common.js", [], "1.0", true],
         ["multilevel_menu", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/multilevel_menu.js", [], "1.0", true],
         ["w-menu", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-menu.js", [], "1.0", true],
         ["w-logo", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-logo.js", ["jquery"], "1.0", true],
         ["w-search-block", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-search-block.js", ["jquery"], "1.0", true],
+        ["w-folow", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/w-folow.js", ["jquery"], "1.0", true],
         ["main", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/main.js", ["jquery"], "1.0", true],
         ["lf", "{{ \\lf\\LolitaFramework::baseUrl }}/app/assets/js/lf.js", ["jquery"], "1.0", true]
     ],

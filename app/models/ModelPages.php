@@ -28,11 +28,20 @@ class ModelPages
      */
     public static function page404()
     {
+        return View::make('pages' . DS . '404');
+    }
+
+    /**
+     * 404 page
+     */
+    public static function single()
+    {
+        the_post();
         return View::make(
-            'pages' . DS . '404',
+            'pages' . DS . 'single',
             array(
                 'logo' => get_theme_mod(
-                    'general_site_settings_upload_a_logo'
+                    'general_site_settings_upload_a_second_logo'
                 ),
             )
         );

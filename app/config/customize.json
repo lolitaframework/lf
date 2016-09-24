@@ -24,6 +24,10 @@
                 "__CLASS__" : "WP_Customize_Image_Control"
             },
             {
+                "label" : "Upload a second logo",
+                "__CLASS__" : "WP_Customize_Image_Control"
+            },
+            {
                 "label" : "Social icons",
                 "__CLASS__" : "\\lf\\LolitaFramework\\Controls\\Repeater\\CustomizeRepeater",
                 "controls" : [

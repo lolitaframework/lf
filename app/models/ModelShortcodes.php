@@ -24,4 +24,21 @@ class ModelShortcodes
     {
         return View::make('blocks' . DS . 'footer');
     }
+
+    /**
+     * Block b-small-logo
+     *
+     * @return string HTML code.
+     */
+    public static function bSmallLogo()
+    {
+        return View::make(
+            'blocks' . DS . 'b-small-logo',
+            array(
+                'logo' => get_theme_mod(
+                    'general_site_settings_upload_a_logo'
+                ),
+            )
+        );
+    }
 }

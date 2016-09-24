@@ -1,5 +1,6 @@
 {
     "404" : "{{ \\lf\\ModelPages::page404 }}",
+    "single" : "{{ \\lf\\ModelPages::single }}",
     "front" : "{{ \\lf\\ModelPages::home }}",
     "home" : "{{ \\lf\\ModelPages::home }}"
 }
