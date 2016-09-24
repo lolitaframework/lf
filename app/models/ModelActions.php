@@ -15,10 +15,7 @@ class ModelActions
      */
     public static function search()
     {
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
-        //check_ajax_referer('Lolita Framework', 'nonce');
+        check_ajax_referer('Lolita Framework', 'nonce');
         $args = array(
             'posts_per_page'   => 3,
             'offset'           => 0,
@@ -37,7 +34,7 @@ class ModelActions
             $el = array(
                 'url'     => $p->link(),
                 'title'   => $p->title(),
-                'content' => $p->content(255),
+                'content' => wp_strip_all_tags($p->content(255)),
                 'img'     => $p->img()->src('65x65'),
             );
             $return[] = $el;
