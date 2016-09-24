@@ -3,6 +3,7 @@
 namespace lf;
 
 use \lf\LolitaFramework\Core\View;
+use \lf\LolitaFramework\Core\Decorators\Post;
 
 class ModelPages
 {
@@ -43,6 +44,8 @@ class ModelPages
                 'logo' => get_theme_mod(
                     'general_site_settings_upload_a_second_logo'
                 ),
+                'p' => new Post(get_post()),
+                'inner_menu' => View::make('json' . DS . 'inner_menu'),
             )
         );
     }

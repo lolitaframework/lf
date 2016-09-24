@@ -11,38 +11,7 @@
                     <!-- /w-logo -->
                 </div>
                 <div class="l-header__w-menu">
-                    <!-- w-menu -->
-                    <div class="w-menu w-menu--header">
-                        <nav>
-                            <ul class="w-menu__container">
-                                <li class="w-menu__item w-menu__item--has_submenu">
-                                    <a href="#" class="w-menu__link">Docs</a>
-                                    <ul class="w-menu__sub-menu">
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration</a>
-                                        </li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core</a></li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-menu__item w-menu__item--has_submenu">
-                                    <a href="#" class="w-menu__link">About me</a>
-                                    <ul class="w-menu__sub-menu">
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration1</a></li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core1</a></li>
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls1</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-menu__item w-menu__item--has_submenu">
-                                    <a href="#" class="w-menu__link">Our works</a>
-                                    <ul class="w-menu__sub-menu">
-                                        <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="w-menu__item"><a href="#" class="w-menu__link w-menu__link--search">Search</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- /w-menu -->
+                    <?php echo do_shortcode('[lolita-menu_sc]' . $inner_menu . '[/lolita-menu_sc]'); ?>
                 </div>
                 <div class="l-header__w-search-block l-header__w-search-block--hidden">
                     <!-- w-search-block -->
@@ -94,7 +63,7 @@
         <div class="l-header__botton">
             <!-- w-banner -->
             <div class="w-banner w-banner--header">
-                <div class="w-banner__image" style="background-image: url('./img/banner-1.jpg');"></div>
+                <div class="w-banner__image" style="background-image: url('<?php echo $p->img()->src('large') ?>');"></div>
             </div>
             <!-- /w-banner -->
         </div>
