@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <?php if ('' != $p->img()->src('large')): ?>
+        <?php if ('' != $p->img()->src('large')) : ?>
             <div class="l-header__botton">
                 <!-- w-banner -->
                 <div class="w-banner w-banner--header">
