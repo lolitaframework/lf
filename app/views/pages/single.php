@@ -32,13 +32,15 @@
                 </div>
             </div>
         </div>
-        <div class="l-header__botton">
-            <!-- w-banner -->
-            <div class="w-banner w-banner--header">
-                <div class="w-banner__image" style="background-image: url('<?php echo $p->img()->src('large') ?>');"></div>
+        <?php if ('' != $p->img()->src('large')): ?>
+            <div class="l-header__botton">
+                <!-- w-banner -->
+                <div class="w-banner w-banner--header">
+                    <div class="w-banner__image" style="background-image: url('<?php echo $p->img()->src('large') ?>');"></div>
+                </div>
+                <!-- /w-banner -->
             </div>
-            <!-- /w-banner -->
-        </div>
+        <?php endif ?>
     </header>
     <!-- /l-header -->
     <!-- l-content -->
@@ -248,21 +250,7 @@
             <!-- /w-folow -->
         </div>
         <div class="l-footer__row">
-            <!-- w-social-buttons -->
-            <div class="w-social-buttons">
-                <ul class="w-social-buttons__items">
-                    <li class="w-social-buttons__item">
-                        <a href="#" class="w-social-buttons__link"><i class="w-social-buttons__link__icon fa fa-facebook"></i></a>
-                    </li>
-                    <li class="w-social-buttons__item">
-                        <a href="#" class="w-social-buttons__link"><i class="w-social-buttons__link__icon fa fa-twitter"></i></a>
-                    </li>
-                    <li class="w-social-buttons__item">
-                        <a href="#" class="w-social-buttons__link"><i class="w-social-buttons__link__icon fa fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /w-social-buttons -->
+            <?php echo do_shortcode('[lolita-social-networks_sc]' . $social_icons . '[/lolita-social-networks_sc]') ?>
         </div>
         <div class="l-footer__row l-footer__row--centered">
             <?php echo do_shortcode('[b-small-logo]') ?>

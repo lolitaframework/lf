@@ -41,12 +41,16 @@ class ModelPages
         return View::make(
             'pages' . DS . 'single',
             array(
-                'logo' => get_theme_mod(
-                    'general_site_settings_upload_a_second_logo'
-                ),
-                'p' => new Post(get_post()),
-                'inner_menu' => View::make('json' . DS . 'inner_menu'),
+                'logo'             => get_theme_mod('general_site_settings_upload_a_second_logo'),
+                'p'                => new Post(get_post()),
+                'inner_menu'       => View::make('json' . DS . 'inner_menu'),
                 'tmpl_search_item' => View::make('tmpl' . DS . 'search_item'),
+                'social_icons'     => View::make(
+                    'json' . DS . 'social_icons',
+                    array(
+                        'collection' => get_theme_mod('general_site_settings_social_icons'),
+                    )
+                ),
             )
         );
     }
