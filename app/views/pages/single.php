@@ -143,6 +143,7 @@
     <!-- l-footer -->
     <div class="l-footer">
         <div class="l-footer__row">
+            <?php echo do_shortcode('[lolita-instagram_sc]'.$instagram.'[/lolita-instagram_sc]') ?>
             <!-- w-folow -->
             <div class="w-folow">
                 <h5 class="w-folow__title">Folow</h5>

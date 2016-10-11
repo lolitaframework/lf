@@ -44,6 +44,7 @@ class ModelPages
                 'logo'             => get_theme_mod('general_site_settings_upload_a_second_logo'),
                 'p'                => new Post(get_post()),
                 'inner_menu'       => View::make('json' . DS . 'inner_menu'),
+                'instagram'        => View::make('json' . DS . 'instagram'),
                 'tmpl_search_item' => View::make('tmpl' . DS . 'search_item'),
                 'social_icons'     => View::make(
                     'json' . DS . 'social_icons',

@@ -1,0 +1,23 @@
+{
+    "name" : "Lolita Instagram",
+    "description" : "Lolita instagram widget",
+    "classname" : "lf_instagram",
+    "view" : ["\\lf\\app\\widgets\\instagram\\engine\\Engine", "widget"],
+    "controls" : [
+        {
+            "name"     : "title",
+            "__TYPE__" : "Text",
+            "label"    : "Title"
+        },
+        {
+            "name"     : "api_key",
+            "__TYPE__" : "Text",
+            "label"    : "API key"
+        },
+        {
+            "name"     : "user_name",
+            "__TYPE__" : "Text",
+            "label"    : "User name"
+        }
+    ]
+}
